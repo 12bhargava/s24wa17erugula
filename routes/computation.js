@@ -4,15 +4,13 @@ const router = express.Router();
 router.get('/', function(req, res) {
     
     var a = Math.random()*10+1;
-    var b = Math.random()*10+1; 
-    const absvalue = Math.abs(a - b);
-    a = Math.min(Math.max(a, -1), 1);
-    const acosresult = Math.acos(a);
+    const cosvalue = Math.cos(a);
+    const asinhresult = Math.asinh(a);
  
-    const sinresult = Math.sin(a)
-    res.send(`Math.abs(a - b) applied to ${a} and ${b} is ${absvalue}<br>
-    Math.acos(a) applied to ${a} is ${acosresult} <br>
-    Math.sin(a) applied to ${a} is ${sinresult} <br>
+    const asinresult = Math.asin(a)
+    res.send(`Math.cos applied to ${a} is ${cosvalue}<br>
+    Math.asinh(a) applied to ${a} is ${asinhresult } <br>
+    Math.asin(a) applied to ${a} is ${asinresult} <br>
     `);
  
 });
